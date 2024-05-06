@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wer wird Millionär?</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            position: relative; /* Stelle sicher, dass die Positionierung relativ ist */
+        }
+
+        #header-image {
+            position: absolute; /* Positioniere das Bild absolut */
+            top: 10px; /* Abstand von oben */
+            right: 10px; /* Abstand von rechts */
+            width: 300px; /* Breite des Bildes */
+            height: auto; /* Automatische Höhe */
+        }
+
+        #title-container {
+            margin-top: 20px; /* Abstand zwischen der Überschrift und dem Container */
+        }
+
+        #question-container {
+            max-width: 600px;
+            padding: 20px;
+            background-color: #ffb703;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px; /* Abstand zwischen der Überschrift und dem Container */
+        }
+    </style>
+</head>
+<body>
+<img id="header-image" src="img.png" alt="Logo">
+
+<div id="title-container">
+    <h1>Wer wird Millionär?</h1>
+</div>
+
+<div id="question-container" style="width: 600px; height: 400px;">
+    <div id="category-selection">
+        <h2 style="margin-bottom: 90px;">Wähle eine Kategorie:</h2>
+        <button class="category-btn" data-category="allgemein">Allgemeine Fragen</button>
+        <button class="category-btn" data-category="informatik">Informatik</button>
+        <button class="category-btn" data-category="business">Business und Informatik</button>
+    </div>
+
+    <div id="category-info" style="display: none;"></div> <!-- Platzhalter für die ausgewählte Kategorie -->
+    <div id="level-selection" style="display: none;"> <!-- Levelauswahl -->
+        <div class="level-header">
+            <h2>Wähle eine Schwierigkeitsstufe:</h2>
+        </div>
+        <div class="level-container">
+            <button class="level-btn" data-level="leicht">Leicht</button>
+            <button class="level-btn" data-level="schwer">Schwer</button>
+            <button class="level-btn" data-level="sehr-schwer">Sehr schwer</button>
+        </div>
+    </div>
+    <div id="question" style="display: none;"></div>
+    <div id="options" style="display: none;"></div>
+    <div id="game-end-notification" style="display: none;">
+        <p>Spiel beendet!</p>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
